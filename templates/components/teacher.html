@@ -1,0 +1,36 @@
+<div class="container-fluid mt-2">
+    <ul class="nav nav-pills nav-fill text-white" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active text-white" data-bs-toggle="tab" href="#student">Student</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" data-bs-toggle="tab" href="#recognise">Recognise</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="student" class="container tab-pane fade"><br>
+            <table class="table table-bordered w-50 mx-auto text-white caption-top my-4">
+                <caption class="text-white">Students Attendance Details</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in attend%}
+                    <tr>
+                        <th scope="row" class="text-capitalize">{{i.name}}</th>
+                        <td>{{i.time}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div id="recognise" class="container tab-pane fade"><br>
+            <h3>Gait Recognition</h3>
+            {% include 'components/recognise.html' %}
+        </div>
+    </div>
+</div>

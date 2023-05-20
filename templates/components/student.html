@@ -1,0 +1,17 @@
+<table class="table table-bordered w-50 mx-auto text-white caption-top my-4">
+    <caption class="text-white">Attendance Details</caption>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in attend%}
+        <tr>
+            <th scope="row" class="text-capitalize">{{i.name}}</th>
+            <td>{{i.time}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

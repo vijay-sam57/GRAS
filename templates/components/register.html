@@ -1,0 +1,22 @@
+<div class="mt-3">
+  <form action="/upload" method="post" enctype="multipart/form-data" autocomplete="off">
+    <div class="form-group m-2 px-2">
+      <label for="name">Name</label>
+      <input type="text" class="form-control w-50 text-dark" name="name" id="name" aria-describedby="nameHelp"
+        placeholder="Enter Person Name" />
+      <small id="nameHelp" class="form-text text-white">Please enter a unique name</small>
+    </div>
+
+    <div class="form-group m-2 px-2">
+      <label for="regFile">Video File</label>
+      <div class="custom-file">
+        <input type="file" class="form-control w-50 p-2" id="regFile" name="regFile" accept="video/*">
+      </div>
+      <small id="fileHelp" class="form-text text-white">Video processing takes a while, please be patient!</small>
+    </div>
+    <button type="submit" class="btn btn-primary ms-4 px-3">Register</button>
+    <button type="reset" class="btn btn-primary ms-2 px-3">Clear</button>
+  </form>
+</div>
+
+<script type="text/javascript" src="/static/js/update_label.js"></script>

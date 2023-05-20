@@ -1,0 +1,19 @@
+{% include 'base.html' %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark p-2 py-auto">
+    <div class="container-fluid">
+        <p class="navbar-brand my-1 text-capitalize text-primary">Gait Recognition Attendance System - Result portal
+        </p>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{ url_for('home')}}">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container w-50 mx-auto my-5">
+    <img src="{{ url_for('video_feed')}}" alt="Gait Recognition">
+    <h4 class="m-2">The above person is <strong>{{name}}</strong> at time {{time}}</h4>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% include 'base.html'%}
+
+<body>
+    <div class="login">
+        <div>
+            <h2 class="hero1">Gait Recognition Attendance System</h2>
+            <p class="hero2">Login to continue.</p>
+            <form action="/login" method="post" autocomplete="off">
+                <div class="inputbox">
+                    <div class="userinput">
+                        <p>Username</p>
+                        <input required id="username" type="username" name="username" />
+                    </div>
+                    <div class="userinput">
+                        <p>Password</p>
+                        <input required id="password" type="password" name="password" />
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Submit" class="submit-btn" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
